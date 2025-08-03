@@ -19,6 +19,9 @@
 			<id>github</id>
 			<name>Github Packages</name>
 			<url>https://maven.pkg.github.com/luisdeveloper/jenkinsHelloWorld</url>
+			<!--<snapshots>
+				<enabled>true</enabled>
+			</snapshots>-->
 		</repository>
 	</distributionManagement>
 </project>
