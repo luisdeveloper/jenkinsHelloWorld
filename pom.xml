@@ -1,12 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.luisdeveloper</groupId>
-  <artifactId>jenkins.helloworld</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>JenkinsHelloWorld</name>
-  <description>Project created with the purpose of practicing with jenkins pipelines</description>
-  <properties>
-  <maven.compiler.source>21</maven.compiler.source>
-  <maven.compiler.target>21</maven.compiler.target>
-</properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.luisdeveloper</groupId>
+	<artifactId>jenkins.helloworld</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+	<name>JenkinsHelloWorld</name>
+	<description>Project created with the purpose of practicing with jenkins
+		pipelines</description>
+	<properties>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+	</properties>
+	<distributionManagement>
+		<!-- configuracion para subir jar a github packages-->
+		<repository>
+			<id>github</id>
+			<name>Github Packages</name>
+			<url>https://maven.pkg.github.com/luisdeveloper/jenkinsHelloWorld</url>
+		</repository>
+	</distributionManagement>
 </project>
