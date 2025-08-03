@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.luisdeveloper</groupId>
 	<artifactId>jenkins.helloworld</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>JenkinsHelloWorld</name>
 	<description>Project created with the purpose of practicing with jenkins
@@ -19,9 +19,9 @@
 			<id>github</id>
 			<name>Github Packages</name>
 			<url>https://maven.pkg.github.com/luisdeveloper/jenkinsHelloWorld</url>
-			<!--<snapshots>
+			<snapshots>
 				<enabled>true</enabled>
-			</snapshots>-->
+			</snapshots>
 		</repository>
 	</distributionManagement>
 </project>
