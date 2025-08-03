@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage("---DOWNLOAD---"){
+            steps{
+                git 'https://github.com/luisdeveloper/jenkinsHelloWorld.git'
+            }
+        }
+        stage("---BUILD---"){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        stage ("---------------DEPLOY PACKAGE ON ARTIFACT REPOSITORY-----------------"){
+            steps{
+                sh 'mvn deploy'
+            }
+        }
+    }
+}
