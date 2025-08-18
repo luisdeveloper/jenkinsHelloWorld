@@ -24,7 +24,6 @@ pipeline {
             }
         stage('Descargar JAR desde GitHub Packages') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github-access', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]) {
                         sh '''
                             mkdir -p ~/.m2
                             mvn dependency:get \
@@ -37,14 +36,14 @@ pipeline {
                           
                           cp ~/.m2/repository/$(echo ${JAR_GROUP_ID} | tr '.' '/')/${JAR_ARTIFACT_ID}/${JAR_VERSION}/${JAR_ARTIFACT_ID}-${JAR_VERSION}.jar app.jar
                         '''
-                        
                     }
-                }
+                
             }
             
             stage('Construir imagen Docker') {
             steps {
-                sh '''            
+                sh '''
+            
                     docker build -t ${DOCKER_IMAGE} .
                 '''
             }
@@ -57,5 +56,5 @@ pipeline {
                 '''
             }
         }
-    }
+        }
 }
